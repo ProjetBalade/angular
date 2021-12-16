@@ -14,16 +14,21 @@ export class UserService implements UserRepository {
   constructor(private http: HttpClient) {
   }
 
-  query(): Observable<Users> {
+    GetAll(): Observable<Users> {
         return this.http.get<User>(UserService.URL);
     }
-    create(user: User): Observable<Users> {
+
+    GetById(id: number): Observable<User> {
+      return this.http.get<User>(UserService.URL+'/'+id);
+    }
+
+    Create(user: User): Observable<Users> {
         return this.http.post<User>(UserService.URL, user);
     }
-    delete(id: number): Observable<any> {
+    Delete(id: number): Observable<any> {
         return this.http.delete(UserService.URL+ '/' + id);
     }
-    update(id: number, user: User): Observable<any> {
+    Update(id: number, user: User): Observable<any> {
        return this.http.put(UserService.URL + '/' + id, user);
     }
 }

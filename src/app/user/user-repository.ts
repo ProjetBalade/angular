@@ -2,11 +2,13 @@ import { Observable } from "rxjs";
 import {User, Users } from "./user";
 
 export interface UserRepository {
-    query(): Observable<Users>;
+    GetAll(): Observable<Users>;
 
-    create(user: User) : Observable<Users>;
+    GetById(id : number): Observable<User>;
 
-    delete(id : number) : Observable<any>;
+    Create(user: User) : Observable<Users>;
 
-    update(id: number, user: User) : Observable<any>;
+    Delete(id : number) : Observable<any>;
+
+    Update(id: number, user: User) : Observable<any>;
 }

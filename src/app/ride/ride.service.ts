@@ -14,16 +14,21 @@ export class RideService implements RideRepository {
   constructor(private http: HttpClient) {
   }
 
-  query(): Observable<Rides> {
+  GetAll(): Observable<Rides> {
     return this.http.get<Ride>(RideService.URL);
   }
-  create(ride: Ride): Observable<Rides> {
+
+  GetById(id: number): Observable<Ride> {
+    return this.http.get<Ride>(RideService.URL+ '/'+id);
+  }
+
+  Create(ride: Ride): Observable<Rides> {
     return this.http.post<Ride>(RideService.URL, ride);
   }
-  delete(id: number): Observable<any> {
+  Delete(id: number): Observable<any> {
     return this.http.delete(RideService.URL+ '/' + id);
   }
-  update(id: number, ride: Ride): Observable<any> {
+  Update(id: number, ride: Ride): Observable<any> {
     return this.http.put(RideService.URL + '/' + id, ride);
   }
 }

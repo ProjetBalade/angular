@@ -1,12 +1,14 @@
 import { Observable } from "rxjs";
 import {Ride, Rides } from "./ride";
 
-export interface UserRepository {
-    query(): Observable<Rides>;
+export interface RideRepository {
+    GetAll(): Observable<Rides>;
 
-    create(ride: Ride) : Observable<Rides>;
+    GetById(id : number) : Observable<Ride>;
 
-    delete(id : number) : Observable<any>;
+    Create(ride: Ride) : Observable<Rides>;
 
-    update(id: number, ride: Ride) : Observable<any>;
+    Delete(id : number) : Observable<any>;
+
+    Update(id: number, ride: Ride) : Observable<any>;
 }

@@ -1,0 +1,33 @@
+<h2>Create a ride</h2>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label>
+        <input type="text" formControlName="nameRide">
+    </label>
+    <label>
+        <input type="text" formControlName="place">
+    </label>
+    <label>
+        <input type="text" formControlName="description">
+    </label>
+    <label>
+        <input type="text" formControlName="website">
+    </label>
+    <label>
+        <input type="number" formControlName="difficulty">
+    </label>
+    <label>
+        <input type="text" formControlName="schedule">
+    </label>
+    <label>
+        <input type="text" formControlName="photo">
+    </label>
+    <label>
+        <input type="number" formControlName="score">
+    </label>
+    <label>
+        <input type="number" formControlName="idUser">
+    </label>
+    <input type="submit" [disabled]="form.invalid">
+</form>
+
+

@@ -1,1 +1,2 @@
-<p>user works!</p>
+<app-user-form (userCreated)="createUser($event)"></app-user-form>
+<app-user-list [users]="users" (userDeleted)="deleteUser($event)" (userChanged)="updateUser($event)"></app-user-list>

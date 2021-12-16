@@ -1,0 +1,13 @@
+<h2>Create a user</h2>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label>
+        <input type="text" formControlName="name">
+    </label>
+    <label>
+        <input type="text" formControlName="email">
+    </label>
+    <label>
+        <input type="text" formControlName="password">
+    </label>
+    <input type="submit" [disabled]="form.invalid">
+</form>
