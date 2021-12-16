@@ -13,19 +13,25 @@ export class DogApiService implements DogRepository{
 
   constructor(private http: HttpClient) { }
 
-  create(dog: Dog): Observable<Dog> {
-    return this.http.post<Dog>(DogApiService.URL, dog);
+  GetAll(): Observable<Dogs> {
+    return this.http.get<Dogs>(DogApiService.URL+'/getall');
   }
 
-  delete(id: number): Observable<any> {
+  GetById(id: number): Observable<Dog> {
+    return this.http.get<Dog>(DogApiService.URL+ '/'+id);
+  }
+
+  Create(dog: Dog): Observable<Dog> {
+    return this.http.post<Dog>(DogApiService.URL + '/create', dog);
+  }
+
+  Update(id: number, dog: Dog): Observable<any> {
+    return this.http.put(DogApiService.URL + '/' + id, dog);
+  }
+
+  Delete(id: number): Observable<any> {
     return this.http.delete(DogApiService.URL + '/' + id);
   }
 
-  query(): Observable<Dogs> {
-    return this.http.get<Dog>(DogApiService.URL);
-  }
 
-  update(id: number, dog: Dog): Observable<any> {
-    return this.http.put(DogApiService.URL + '/' + id, dog);
-  }
 }

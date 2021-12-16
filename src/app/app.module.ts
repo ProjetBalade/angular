@@ -2,16 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { DogComponent } from './dog/dog.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {DogModule} from './dog/dog.module';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DogComponent
+  declarations: [AppRoutingModule.components
+
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        DogModule,
+        AppRoutingModule
+
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

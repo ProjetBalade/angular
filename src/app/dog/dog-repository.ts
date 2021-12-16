@@ -3,11 +3,13 @@ import {Dog, Dogs} from "./dog";
 
 export interface DogRepository {
 
-    query(): Observable<Dogs>;
+    GetAll(): Observable<Dogs>;
 
-    create(dog: Dog): Observable<Dog>;
+    GetById(id : number) : Observable<Dog>;
 
-    delete(id: number): Observable<any>;
+    Create(dog: Dog): Observable<Dog>;
 
-    update(id: number, dog: Dog): Observable<any>;
+    Update(id: number, dog: Dog): Observable<any>;
+
+    Delete(id: number): Observable<any>;
 }

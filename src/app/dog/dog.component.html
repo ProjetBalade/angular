@@ -1,1 +1,5 @@
-<p>dog works!</p>
+<app-dog-form (dogCreated)="createDog($event)" ></app-dog-form>
+<app-dog-list
+        [dogs]="dogs"
+        (dogDeleted)="deleteDog($event)"
+        (dogChanged)="updateDog($event)"></app-dog-list>
