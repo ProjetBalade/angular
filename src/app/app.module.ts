@@ -8,6 +8,9 @@ import { CommentListComponent } from './comment/comment-list/comment-list.compon
 import { MessageComponent } from './message/message.component';
 import { MessageFormComponent } from './message/message-form/message-form.component';
 import { MessageListComponent } from './message/message-list/message-list.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +23,11 @@ import { MessageListComponent } from './message/message-list/message-list.compon
     MessageListComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+      AppRoutingModule,
+      ReactiveFormsModule,
+      HttpClientModule,
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

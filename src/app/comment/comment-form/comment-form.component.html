@@ -1,1 +1,74 @@
-<p>comment-form works!</p>
+<form [formGroup]="form" (submit)="submit()">
+
+<div class="row custom-row">
+    <div class= "col-sm-5 custom-container jumbotron">
+
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>New Comment</legend>
+
+                <!--- content Block --->
+                <div class="form-group">
+                    <textarea rows="10" cols="200" wrap="physique"  class="form-control"></textarea>
+
+                </div>
+                <!--- Score --->
+                <div class="form-group">
+                    <label>Score :
+                    <input type="number"
+                           min=0 max="5"
+                           placeholder="Score">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>Image :
+                    <input type="hidden" formControlName="image"
+                           name="MAX_FILE_SIZE" value="100" />
+                        <input name="file" type="file" />
+
+                    </label>
+                </div>
+
+                <!--- Select difficulty--->
+                <div class="form-group">
+                    <label>Difficulty :
+                        <input type="number"
+                               formControlName="difficulty"
+                               min=0 max=5 class="form-control"
+                               placeholder="choose">
+                    </label>
+                </div>
+
+                <!--- idUser --->
+                <div class="form-group">
+                    <label>User's id :
+                        <input type="number"
+                               formControlName="idUser"
+                               class="form-control"
+                               min = 0
+                               placeholder="choose">
+                    </label>
+                </div>
+
+                <!--- idRide --->
+                <div class="form-group">
+                    <label>Ride's id :
+                        <input type="number"
+                               formControlName="idRide"
+                               class="form-control"
+                               min = 0
+                               placeholder="choose">
+                    </label>
+                </div>
+
+                <!--- Buttons Block --->
+                <div class="form-group">
+                    <button type="reset" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</form>

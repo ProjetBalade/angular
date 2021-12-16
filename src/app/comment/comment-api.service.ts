@@ -8,9 +8,9 @@ import {Comment, Comments} from './comment';
 @Injectable({
   providedIn: 'root'
 })
-export class CommentApiService implements CommentRepository{
+export class CommentApiService implements CommentRepository {
 
- static readonly URL: string = environment.serverAdresse + 'api/comments';
+ static readonly URL: string = environment.serverAdress + 'api/comments';
 
   constructor(private http: HttpClient) {
 
@@ -20,7 +20,7 @@ export class CommentApiService implements CommentRepository{
     return this.http.post<Comment>(CommentApiService.URL, comment);
   }
 
-  delete(id: number): Observable<any> {
+    delete(id: number | undefined): Observable<any> {//à controler
     return this.http.delete(CommentApiService.URL + '/' + id);
   }
 
@@ -28,7 +28,11 @@ export class CommentApiService implements CommentRepository{
     return this.http.get<Comments>(CommentApiService.URL);
   }
 
-  update(id: number, comment: Comment): Observable<any> {
+  getById(content: string): Observable<number> {
+      return this.http.get<number>(CommentApiService.URL + "/Content/" + content);
+  }
+
+    update(id: number | undefined, comment: Comment): Observable<any> {//à controler
     return this.http.put(CommentApiService.URL + '/' + id, comment);
   }
 }

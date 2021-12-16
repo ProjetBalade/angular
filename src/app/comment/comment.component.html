@@ -1,1 +1,15 @@
-<p>comment works!</p>
+
+<h1>Ajouter un commentaire</h1>
+<section>
+    <ul class="sub-menu">
+        <li class="sub-menu-item">
+            <app-comment-form (commentCreated)="postComment($event)"></app-comment-form>
+        </li>
+        <li class="sub-menu-item">
+            <app-comment-list [comments] = "comments"
+                              (commentDeleted) ="deleteComment($event)"
+                              (commentChanged) = "updateComment($event)">
+            </app-comment-list>
+        </li>
+    </ul>
+</section>
