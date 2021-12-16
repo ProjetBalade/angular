@@ -1,13 +1,16 @@
 <h2>Création de Dog</h2>
 <form [formGroup]="form" (ngSubmit)="submit()">
-    <label>
-        <input type="text" formControlName="name">
+    <label>Name of the dog :
+        <input type="text" formControlName="nameDog">
     </label>
-    <label>
-        <input type="text" formControlName="race">
+    <label>Race of the dog :
+        <input type="text" formControlName="raceDog">
     </label>
-    <label>
+    <label>Date of birth :
         <input type="text" formControlName="dateOfBirth">
+    </label>
+    <label>idUser :
+        <input type="number" formControlName="idUser">
     </label>
     <input type="submit" [disabled]="form.invalid">
 </form>

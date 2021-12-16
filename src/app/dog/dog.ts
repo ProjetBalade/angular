@@ -1,10 +1,9 @@
-import {DatePipe} from "@angular/common";
 
 export interface Dog {
     id: number;
     nameDog: string;
     raceDog: string;
-    dateOfBirth: DatePipe;
+    dateOfBirth: any;
     idUser:number;
 }
 export declare type Dogs = Dog[];
