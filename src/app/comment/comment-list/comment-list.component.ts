@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Comments} from "../comment";
+import {Comment, Comments} from "../comment";
 import {ElementToDelete} from "../../commons/element-to-delete";
 
 @Component({

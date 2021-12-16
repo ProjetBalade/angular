@@ -10,7 +10,7 @@ import {Comment, Comments} from './comment';
 })
 export class CommentApiService implements CommentRepository {
 
- static readonly URL: string = environment.serverAdress + 'api/comments';
+ static readonly URL: string = environment.serverAdress + 'api/dbBalade/Comment';
 
   constructor(private http: HttpClient) {
 
@@ -20,7 +20,7 @@ export class CommentApiService implements CommentRepository {
     return this.http.post<Comment>(CommentApiService.URL, comment);
   }
 
-    delete(id: number | undefined): Observable<any> {//à controler
+  delete(id: number): Observable<any> {//à controler
     return this.http.delete(CommentApiService.URL + '/' + id);
   }
 
@@ -28,11 +28,11 @@ export class CommentApiService implements CommentRepository {
     return this.http.get<Comments>(CommentApiService.URL);
   }
 
-  getById(content: string): Observable<number> {
-      return this.http.get<number>(CommentApiService.URL + "/Content/" + content);
+  getById(id: number): Observable<Comment> {
+      return this.http.get<Comment>(CommentApiService.URL + '/' + id);
   }
 
-    update(id: number | undefined, comment: Comment): Observable<any> {//à controler
+  update(id: number, comment: Comment): Observable<any> {//à controler
     return this.http.put(CommentApiService.URL + '/' + id, comment);
   }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Message, Messages} from "../message";
+import {ElementToDelete} from "../../commons/element-to-delete";
 
 @Component({
   selector: 'app-message-list',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageListComponent implements OnInit {
 
+  @Input() messages: Messages = [];
+  @Output() messageDeleted: EventEmitter<ElementToDelete<Message>> =
+      new EventEmitter<ElementToDelete<Message>>();
+  @Output() messageChanged: EventEmitter<Message> =
+      new EventEmitter<Message>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  delete(message: Message, index: number) {
+    this.messageDeleted.emit({
+     element: message,
+      index: index
+    });
+  }
+
+  update(message: Message) {
+    this.messageChanged.emit(message);
+  }
 }

@@ -9,14 +9,18 @@
 
                 <!--- content Block --->
                 <div class="form-group">
-                    <textarea rows="10" cols="200" wrap="physique"  class="form-control"></textarea>
+                    <textarea rows="10" cols="200" wrap="physique"
+                              formControlName="content"
+                              class="form-control"></textarea>
 
                 </div>
                 <!--- Score --->
                 <div class="form-group">
                     <label>Score :
                     <input type="number"
-                           min=0 max="5"
+                           required min=0
+                           required max="5"
+                           class="form-control"
                            placeholder="Score">
                     </label>
                 </div>
@@ -35,7 +39,8 @@
                     <label>Difficulty :
                         <input type="number"
                                formControlName="difficulty"
-                               min=0 max=5 class="form-control"
+                               required min=0
+                               required max=5 class="form-control"
                                placeholder="choose">
                     </label>
                 </div>
@@ -46,7 +51,7 @@
                         <input type="number"
                                formControlName="idUser"
                                class="form-control"
-                               min = 0
+                               required min = 0
                                placeholder="choose">
                     </label>
                 </div>
@@ -57,17 +62,15 @@
                         <input type="number"
                                formControlName="idRide"
                                class="form-control"
-                               min = 0
+                               required min = 0
                                placeholder="choose">
                     </label>
                 </div>
-
-                <!--- Buttons Block --->
-                <div class="form-group">
-                    <button type="reset" class="btn btn-default">Cancel</button>
-                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+                <div>
+                    <input type="submit" [disabled]="form.invalid">
                 </div>
             </fieldset>
+
         </form>
     </div>
 </div>

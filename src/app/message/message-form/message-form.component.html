@@ -1,1 +1,16 @@
-<p>message-form works!</p>
+<h2>Création de Messages !</h2>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <textarea
+        input type="text" formControlName="content">
+    </textarea>
+    <label>
+        <input type="number" formControlName="idRecipient">
+    </label>
+    <label>
+        <input type="number" formControlName="idSender">
+    </label>
+    <label>
+        <input type="text" formControlName="object">
+    </label>
+    <input type="submit" [disabled]="form.invalid">
+</form>

@@ -6,8 +6,8 @@
             <app-comment-form (commentCreated)="postComment($event)"></app-comment-form>
         </li>
         <li class="sub-menu-item">
-            <app-comment-list [comments] = "comments"
-                              (commentDeleted) ="deleteComment($event)"
+            <app-comment-list [comments] ="comments"
+                              (commentDeleted) = "deleteComment($event)"
                               (commentChanged) = "updateComment($event)">
             </app-comment-list>
         </li>

@@ -1,21 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {CommentComponent} from "./comment.component";
-import {RouterModule, Routes} from "@angular/router";
+import {RouterModule, Routes} from '@angular/router';
 import {CommentListComponent} from "./comment-list/comment-list.component";
 import {CommentFormComponent} from "./comment-form/comment-form.component";
 
 const routes: Routes = [
   {
-    path: 'comments', component: CommentComponent
+    path: 'api/comment', component: CommentComponent
   }
 ];
 
 
 @NgModule({
-  declarations: [],
-  imports: [RouterModule.forChild(routes),
-    CommonModule],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class CommentsRoutingModule {
