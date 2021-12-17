@@ -2,25 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { RideComponent } from './ride/ride.component';
-import { UserListComponent } from './user/user-list/user-list.component';
-import { UserFormComponent } from './user/user-form/user-form.component';
-import { RideListComponent } from './ride/ride-list/ride-list.component';
-import { RideFormComponent } from './ride/ride-form/ride-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
+import {RideModule} from "./ride/ride.module";
+import {UserModule} from "./user/user.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserComponent,
-    RideComponent,
-    UserListComponent,
-    UserFormComponent,
-    RideListComponent,
-    RideFormComponent
+  declarations: [AppRoutingModule.components
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    UserModule,
+    RideModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,7 +26,7 @@ export class RideComponent implements OnInit, OnDestroy {
   private loadRides() {
     this.subscriptions.push(
         this.rideRepository.GetAll()
-            .subscribe(rides => this.rides = rides);
+            .subscribe(rides => this.rides = rides)
     )
 
   }
