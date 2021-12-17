@@ -6,7 +6,7 @@ export interface UserRepository {
 
     GetById(id : number): Observable<User>;
 
-    Create(user: User) : Observable<Users>;
+    Create(user: User) : Observable<User>;
 
     Delete(id : number) : Observable<any>;
 

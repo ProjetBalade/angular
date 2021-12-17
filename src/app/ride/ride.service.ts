@@ -22,7 +22,7 @@ export class RideService implements RideRepository {
     return this.http.get<Ride>(RideService.URL+ '/'+id);
   }
 
-  Create(ride: Ride): Observable<Rides> {
+  Create(ride: Ride): Observable<Ride> {
     return this.http.post<Ride>(RideService.URL, ride);
   }
   Delete(id: number): Observable<any> {

@@ -6,7 +6,7 @@ export interface RideRepository {
 
     GetById(id : number) : Observable<Ride>;
 
-    Create(ride: Ride) : Observable<Rides>;
+    Create(ride: Ride) : Observable<Ride>;
 
     Delete(id : number) : Observable<any>;
 
