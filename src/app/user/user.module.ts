@@ -1,22 +1,22 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {DogRoutingModule} from './dog-routing.module';
+import {UserRoutingModule} from './user-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {DogComponent} from "./dog.component";
+import {UserComponent} from "./user.component";
 
 
 @NgModule({
-    declarations: [DogRoutingModule.components],
+    declarations: [UserRoutingModule.components],
     exports: [
-        DogComponent
+        UserComponent
     ],
     imports: [
         CommonModule,
-        DogRoutingModule,
+        UserRoutingModule,
         ReactiveFormsModule,
         FormsModule
     ]
 })
-export class DogModule {
+export class UserModule {
 }

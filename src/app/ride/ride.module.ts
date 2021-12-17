@@ -1,22 +1,22 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {DogRoutingModule} from './dog-routing.module';
+import {RideRoutingModule} from './ride-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {DogComponent} from "./dog.component";
+import {RideComponent} from "./ride.component";
 
 
 @NgModule({
-    declarations: [DogRoutingModule.components],
+    declarations: [RideRoutingModule.components],
     exports: [
-        DogComponent
+        RideComponent
     ],
     imports: [
         CommonModule,
-        DogRoutingModule,
+        RideRoutingModule,
         ReactiveFormsModule,
         FormsModule
     ]
 })
-export class DogModule {
+export class RideModule {
 }
