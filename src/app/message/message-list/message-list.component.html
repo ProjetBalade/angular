@@ -10,7 +10,7 @@
             <th>idSender</th>
             <th>Object</th>
 
-            <th>Add a new message</th>
+            <th>Update</th>
             <th>Cancel</th>
         </tr>
         </thead>
@@ -24,10 +24,10 @@
             <td>{{message.object}}</td>
 
             <td>
-                <button (click)="delete(message, index)">Cancel</button>
+                <button (click)="update(message)">Update</button>
             </td>
             <td>
-                <button (click)="update(message)">Update</button>
+                <button (click)="delete(message, index)">Cancel</button>
             </td>
         </tr>
         </tbody>

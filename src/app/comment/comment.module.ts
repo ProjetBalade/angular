@@ -6,7 +6,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
-  declarations: [CommentsRoutingModule.components],
+  declarations: [],
   imports: [
     CommonModule,
       CommentsRoutingModule,
