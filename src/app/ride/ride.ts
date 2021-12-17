@@ -6,7 +6,6 @@ export interface Ride {
     website: string;
     difficulty:number;
     schedule:string;
-    photo:string;
     score:number;
     idUser: number;
 }

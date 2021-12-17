@@ -17,9 +17,8 @@ export class RideFormComponent implements OnInit {
     website: ['', Validators.required],
     difficulty:['', Validators.required],
     schedule:['', Validators.required],
-    photo:['', Validators.required],
     score:['', Validators.required],
-    idUser: ['', Validators.required],
+    idUser: [0, Validators.required],
 
   });
   constructor(private fb: FormBuilder) { }
