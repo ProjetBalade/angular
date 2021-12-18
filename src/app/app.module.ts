@@ -22,7 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     imports: [
         BrowserModule,
         AgmCoreModule.forRoot({
-            apiKey: 'AIzaSyDqaoUPPSGJ2wEej0Zqadcq6LnzYlXgKfI',
+            apiKey: 'AIzaSyAWR-Xd9CFnPNfHZehTyBOCvP-BcKRE6Fk',
             libraries: ['places']
         }),
         ReactiveFormsModule,
