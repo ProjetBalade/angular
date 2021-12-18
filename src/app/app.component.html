@@ -1,30 +1,15 @@
-<p> Test Dog 2  </p>
-<!--<router-outlet></router-outlet>-->
-<app-dog></app-dog>
+<!--<button [routerLink]="'/rides'" >Rides</button>-->
+<!--<button [routerLink]="'/messages'" >Messages</button>-->
+<!--<button [routerLink]="'/notifications'" >Notifications</button>-->
+<!--<button [routerLink]="'/profile'" >Profile</button>-->
 
-<p>Test user</p>
-<app-user></app-user>
+<div id="container">
+  <mat-tab-group id="left-menu" (selectedTabChange)="onTabChanged($event)">
+    <mat-tab  label="Carte"> <app-rides-list></app-rides-list> </mat-tab>
+    <mat-tab  label="Message"> <app-messages-list></app-messages-list> </mat-tab>
+    <mat-tab  label="Notification"> <app-notifications-list></app-notifications-list> </mat-tab>
+    <mat-tab  label="Profil"> <app-dogs-list></app-dogs-list> </mat-tab>
+  </mat-tab-group>
+  <router-outlet id="right-content"></router-outlet>
+</div>
 
-<p>Test ride</p>
-<app-ride></app-ride>
-
-<p>Test message</p>
-<app-message></app-message>
-
-<p>Test comment</p>
-<app-comment></app-comment>
-
-
-<h1>Test google maps</h1>
-
-<agm-map
-        [latitude]='lat'
-        [longitude]='long'
->
-
-    <agm-marker
-            [latitude]="lat"
-            [longitude]="long">
-    </agm-marker>
-
-</agm-map>

@@ -1,42 +1,40 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {AppRoutingModule} from "./app-routing.module";
-import {DogModule} from './dog/dog.module';
-import {CommentModule} from './comment/comment.module';
-import {MessageModule} from './message/message.module';
-import {UserModule} from './user/user.module';
-import {RideModule} from './ride/ride.module';
-import { AgmCoreModule } from '@agm/core';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from '@angular/common/http';
-
-
-
+import {RidesModule} from "./features/rides/rides.module";
+import {MessagesModule} from "./features/messages/messages.module";
+import {NotificationsModule} from "./features/notifications/notifications.module";
+import {ProfileModule} from "./features/profile/profile.module";
+import {LoginModule} from "./features/login/login.module";
+import {RegisterModule} from "./features/register/register.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
-  declarations: [AppRoutingModule.components
-
+  declarations: [
+    AppRoutingModule.components
   ],
-    imports: [
-        BrowserModule,
-        AgmCoreModule.forRoot({
-            apiKey: 'AIzaSyAWR-Xd9CFnPNfHZehTyBOCvP-BcKRE6Fk',
-            libraries: ['places']
-        }),
-        ReactiveFormsModule,
-        HttpClientModule,
-        DogModule,
-        CommentModule,
-        MessageModule,
-        UserModule,
-        RideModule,
-        AppRoutingModule
+  imports: [
+    BrowserModule,
 
-
-    ],
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    RidesModule,
+    MessagesModule,
+    NotificationsModule,
+    ProfileModule,
+    LoginModule,
+    RegisterModule,
+    BrowserAnimationsModule,
+    MatTabsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
