@@ -8,7 +8,7 @@ import {CommentModule} from './comment/comment.module';
 import {MessageModule} from './message/message.module';
 import {UserModule} from './user/user.module';
 import {RideModule} from './ride/ride.module';
-
+import { AgmCoreModule } from '@agm/core';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from '@angular/common/http';
 
@@ -21,6 +21,10 @@ import {HttpClientModule} from '@angular/common/http';
   ],
     imports: [
         BrowserModule,
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyDqaoUPPSGJ2wEej0Zqadcq6LnzYlXgKfI',
+            libraries: ['places']
+        }),
         ReactiveFormsModule,
         HttpClientModule,
         DogModule,
