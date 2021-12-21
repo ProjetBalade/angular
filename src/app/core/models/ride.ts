@@ -8,6 +8,8 @@ export interface Ride {
     schedule:string;
     score:number;
     idUser: number;
+    longitude: number;
+    latitude: number;
 }
 
 export declare type Rides= Ride[];

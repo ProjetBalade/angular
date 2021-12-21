@@ -19,6 +19,8 @@ export class NewRideFormComponent implements OnInit {
     schedule:['', Validators.required],
     score:['', Validators.required],
     idUser: [0, Validators.required],
+    longitude: [0, Validators.required],
+    latitude: [0, Validators.required],
 
   });
   constructor(private fb: FormBuilder) { }

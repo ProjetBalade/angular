@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {MatTabChangeEvent} from "@angular/material/tabs";
 import {Router} from "@angular/router";
 
@@ -10,8 +10,12 @@ import {Router} from "@angular/router";
 export class AppComponent {
   title = 'angular';
 
+  routesWhereLeftMenuIsShown = [
+    '/rides', '/messages', '/notifications', '/profile'
+  ]
 
-  constructor(private router : Router) {
+  constructor(
+    public router : Router) {
   }
 
   onTabChanged(event: MatTabChangeEvent): void{
@@ -29,5 +33,10 @@ export class AppComponent {
         this.router.navigate(['/profile']);
         break;
     }
+  }
+
+  shouldShowLeftMenu(): boolean {
+    const currentUrl = this.router.url;
+    return this.routesWhereLeftMenuIsShown.some(v => currentUrl.indexOf(v) !== -1);
   }
 }

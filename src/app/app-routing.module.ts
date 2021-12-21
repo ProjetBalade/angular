@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import {AppComponent} from "./app.component";
 import {RouterModule, Routes} from "@angular/router";
 import {RidesMapComponent} from "./features/rides/pages/rides-map/rides-map.component";
-import {MessagesListComponent} from "./features/messages/pages/messages-list/messages-list.component";
 import {
   NotificationsListComponent
 } from "./features/notifications/pages/notifications-list/notifications-list.component";
@@ -10,10 +9,11 @@ import {ProfileDetailsComponent} from "./features/profile/pages/profile-details/
 import {LoginComponent} from "./features/login/pages/login/login.component";
 import {RegisterComponent} from "./features/register/pages/register/register.component";
 import {MessageDetailsComponent} from "./features/messages/pages/message-details/message-details.component";
+import {AuthenticatedGuard} from "./core/guards/authenticated.guard";
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'rides', pathMatch: 'full'
+    path: '', redirectTo: 'login', pathMatch: 'full'
   },
   {
     path: 'login', component: LoginComponent
@@ -22,15 +22,19 @@ const routes: Routes = [
     path: 'register', component: RegisterComponent
   },
   {
+    canActivate: [AuthenticatedGuard],
     path: 'rides', component: RidesMapComponent
   },
   {
+    canActivate: [AuthenticatedGuard],
     path: 'messages', component: MessageDetailsComponent
   },
   {
+    canActivate: [AuthenticatedGuard],
     path: 'notifications', component: NotificationsListComponent
   },
   {
+    canActivate: [AuthenticatedGuard],
     path: 'profile', component: ProfileDetailsComponent
   }
 ];

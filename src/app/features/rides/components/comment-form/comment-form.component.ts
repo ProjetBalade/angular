@@ -17,7 +17,9 @@ export class CommentFormComponent implements OnInit {
     score: [0, Validators.max(5)],
     difficulty: [0, [Validators.max(5), Validators.required]],
     idRider: [0, Validators.required],
-    idUser: [0, Validators.required]
+    idUser: [0, Validators.required],
+    longitude:[0, Validators.required],
+    latitude: [0, Validators.required]
   });
   constructor(private fb: FormBuilder) { }
 
