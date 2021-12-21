@@ -1,51 +1,18 @@
-<h2>Rides</h2>
-<table>
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Name of the Ride</th>
-        <th>Place</th>
-        <th>Description</th>
-        <th>Website</th>
-        <th>Difficulty</th>
-        <th>Schedule</th>
-        <th>Score</th>
-        <th>Id User</th>
+<div class="scrollable">
+  <mat-card class="ride-card" *ngFor="let ride of rides; let index = index;"  >
+    <mat-card-title>{{ride.nameRide}}</mat-card-title>
+    <mat-card-subtitle>{{ride.place}}</mat-card-subtitle>
+    <mat-card-content>
+      {{ride.description}}<br>
+      {{ride.website}}<br>
+      {{ride.difficulty}}<br>
+      {{ride.schedule}}<br>
+      {{ride.score}}<br>
+      {{ride.idUser}}<br>
+    </mat-card-content>
+  </mat-card>
+</div>
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let ride of rides; let index = index;">
-        <td>
-            {{ride.id}}
-        </td>
-        <td>
-            {{ride.nameRide}}
-        </td>
-        <td>
-            {{ride.place}}
-        </td>
-        <td>
-            {{ride.description}}
-        </td>
-        <td>
-            {{ride.website}}
-        </td>
-        <td>
-            {{ride.difficulty}}
-        </td>
-        <td>
-            {{ride.schedule}}
-        </td>
-        <td>
-            {{ride.score}}
-        </td>
-        <td>
-            {{ride.idUser}}
-        </td>
-        <td>
-            <button (click)="delete(ride, index)">Delete</button>
-        </td>
-    </tr>
-    </tbody>
-</table>
+
+
+

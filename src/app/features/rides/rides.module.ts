@@ -8,6 +8,8 @@ import {CommentListComponent} from "./components/comment-list/comment-list.compo
 import {NewRideFormComponent} from "./components/new-ride-form/new-ride-form.component";
 import {RidesListViewComponent} from "./components/rides-list-view/rides-list-view.component";
 import {AgmCoreModule} from "@agm/core";
+import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import {AgmCoreModule} from "@agm/core";
       libraries: ['places']
     }),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatIconModule
   ]
 })
 export class RidesModule { }
