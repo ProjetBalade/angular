@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-rides-map',
   templateUrl: './rides-map.component.html',
-  styleUrls: ['./rides-map.component.css']
+  styleUrls: ['./rides-map.component.scss']
 })
 export class RidesMapComponent implements OnInit {
 

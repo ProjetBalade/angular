@@ -10,6 +10,8 @@ import {RidesListViewComponent} from "./components/rides-list-view/rides-list-vi
 import {AgmCoreModule} from "@agm/core";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
+import {MatRippleModule} from "@angular/material/core";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import {MatIconModule} from "@angular/material/icon";
     ReactiveFormsModule,
     FormsModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatRippleModule,
+    MatButtonModule
   ]
 })
 export class RidesModule { }

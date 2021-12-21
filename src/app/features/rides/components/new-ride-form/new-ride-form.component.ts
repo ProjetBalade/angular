@@ -5,7 +5,7 @@ import {Ride} from "../../../../core/models/ride";
 @Component({
   selector: 'app-new-ride-form',
   templateUrl: './new-ride-form.component.html',
-  styleUrls: ['./new-ride-form.component.css']
+  styleUrls: ['./new-ride-form.component.scss']
 })
 export class NewRideFormComponent implements OnInit {
   @Output() rideCreated: EventEmitter<Ride> = new EventEmitter<Ride>();
