@@ -1,0 +1,87 @@
+Index: src/app/app.module.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport {AppRoutingModule} from \"./app-routing.module\";\nimport {DogModule} from './dog/dog.module';\nimport {ReactiveFormsModule} from \"@angular/forms\";\nimport {HttpClientModule} from '@angular/common/http';\n\n@NgModule({\n  declarations: [AppRoutingModule.components\n\n  ],\n    imports: [\n        BrowserModule,\n        ReactiveFormsModule,\n        HttpClientModule,\n        DogModule,\n        AppRoutingModule\n\n    ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/app/app.module.ts b/src/app/app.module.ts
+--- a/src/app/app.module.ts	(revision 0b01b41198e976ef10c62c98a496438c6878f29b)
++++ b/src/app/app.module.ts	(date 1639735696746)
+@@ -4,9 +4,14 @@
+ import { AppComponent } from './app.component';
+ import {AppRoutingModule} from "./app-routing.module";
+ import {DogModule} from './dog/dog.module';
++// import {RideModule} from './ride/ride.module';
++// import {UserModule} from './user/user.module';
+ import {ReactiveFormsModule} from "@angular/forms";
+ import {HttpClientModule} from '@angular/common/http';
+ 
++
++
++
+ @NgModule({
+   declarations: [AppRoutingModule.components
+ 
+@@ -16,8 +21,11 @@
+         ReactiveFormsModule,
+         HttpClientModule,
+         DogModule,
++        // RideModule,
++        // UserModule,
+         AppRoutingModule
+ 
++
+     ],
+   providers: [],
+   bootstrap: [AppComponent]
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"4990668b-8461-4a93-978d-7b33fb4ba4ce\" name=\"Changes\" comment=\"Routing &amp; begin CRUD\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/dog/dog-form/dog-form.component.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/dog/dog-form/dog-form.component.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/dog/dog-form/dog-form.component.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/dog/dog-form/dog-form.component.ts\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/dog/dog.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/dog/dog.ts\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"TypeScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"RESET_MODE\" value=\"HARD\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"20ouyHoYr8Ula7iqtqAgJbhjeHn\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"ts.external.directory.path\" value=\"$PROJECT_DIR$/node_modules/typescript/lib\" />\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/app/dog\" />\n      <recent name=\"$PROJECT_DIR$/src/app\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"npm.Angular CLI Server\">\n    <configuration name=\"Tests (angular)\" type=\"JavaScriptTestRunnerKarma\">\n      <config-file value=\"$PROJECT_DIR$/karma.conf.js\" />\n      <working-directory value=\"$PROJECT_DIR$\" />\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"Angular Application\" type=\"JavascriptDebugType\" uri=\"http://localhost:4200\">\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"Angular CLI Server\" type=\"js.build_tools.npm\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"start\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"4990668b-8461-4a93-978d-7b33fb4ba4ce\" name=\"Changes\" comment=\"\" />\n      <created>1636723513658</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1636723513658</updated>\n      <workItem from=\"1636723515574\" duration=\"75000\" />\n      <workItem from=\"1636723608046\" duration=\"114000\" />\n      <workItem from=\"1639045276382\" duration=\"529000\" />\n      <workItem from=\"1639045854069\" duration=\"2540000\" />\n      <workItem from=\"1639649135195\" duration=\"1171000\" />\n      <workItem from=\"1639670805321\" duration=\"971000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"test commit\">\n      <created>1636723684561</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636723684561</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Create branch - test\">\n      <created>1639045383930</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639045383930</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"3\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"test commit\" />\n    <MESSAGE value=\"Create branch - test\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Create branch - test\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0b01b41198e976ef10c62c98a496438c6878f29b)
++++ b/.idea/workspace.xml	(date 1639736242052)
+@@ -3,9 +3,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="4990668b-8461-4a93-978d-7b33fb4ba4ce" name="Changes" comment="Routing &amp; begin CRUD">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/dog/dog-form/dog-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dog/dog-form/dog-form.component.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/dog/dog-form/dog-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dog/dog-form/dog-form.component.ts" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/dog/dog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dog/dog.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -22,7 +20,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="Aleyna" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -50,8 +48,8 @@
+   </component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="$PROJECT_DIR$/src/app/dog" />
+       <recent name="$PROJECT_DIR$/src/app" />
++      <recent name="$PROJECT_DIR$/src/app/dog" />
+     </key>
+   </component>
+   <component name="RunManager" selected="npm.Angular CLI Server">
+@@ -89,7 +87,8 @@
+       <workItem from="1639045276382" duration="529000" />
+       <workItem from="1639045854069" duration="2540000" />
+       <workItem from="1639649135195" duration="1171000" />
+-      <workItem from="1639670805321" duration="971000" />
++      <workItem from="1639670805321" duration="1323000" />
++      <workItem from="1639733164811" duration="2142000" />
+     </task>
+     <task id="LOCAL-00001" summary="test commit">
+       <created>1636723684561</created>

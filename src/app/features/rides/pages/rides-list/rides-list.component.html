@@ -1,0 +1,5 @@
+<app-new-ride-form (rideCreated)="createRide($event)" ></app-new-ride-form>
+<app-rides-list-view
+        [rides]="rides"
+        (rideDeleted)="deleteRide($event)"
+        (rideChanged)="updateRide($event)"></app-rides-list-view>

@@ -1,0 +1,35 @@
+<h2>La liste des dogs</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Race</th>
+        <th>Date Of Birth</th>
+        <th>IdUser</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let dog of dogs; let index = index;">
+        <td>
+            {{dog.id}}
+        </td>
+        <td>
+            {{dog.nameDog}}
+        </td>
+        <td>
+            {{dog.raceDog}}
+        </td>
+        <td>
+            {{dog.dateOfBirth}}
+        </td>
+        <td>
+            {{dog.idUser}}
+        </td>
+        <td>
+            <button (click)="delete(dog, index)">Delete</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
