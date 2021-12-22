@@ -10,6 +10,7 @@ import {LoginComponent} from "./features/login/pages/login/login.component";
 import {RegisterComponent} from "./features/register/pages/register/register.component";
 import {MessageDetailsComponent} from "./features/messages/pages/message-details/message-details.component";
 import {AuthenticatedGuard} from "./core/guards/authenticated.guard";
+import {DogFormComponent} from "./features/profile/components/dog-form/dog-form.component";
 
 const routes: Routes = [
   {
@@ -36,7 +37,12 @@ const routes: Routes = [
   {
     canActivate: [AuthenticatedGuard],
     path: 'profile', component: ProfileDetailsComponent
+  },
+  {
+    canActivate: [AuthenticatedGuard],
+    path: 'profileAddDog', component: DogFormComponent
   }
+
 ];
 
 @NgModule({

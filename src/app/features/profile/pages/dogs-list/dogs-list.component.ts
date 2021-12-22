@@ -3,6 +3,7 @@ import {Dog, Dogs} from "../../../../core/models/dog";
 import {Subscription} from "rxjs";
 import {DogApiService} from "../../../../core/services/dog-api.service";
 import {ElementToDelete} from "../../../../commons/element-to-delete";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dogs-list',
@@ -13,7 +14,7 @@ export class DogsListComponent implements OnInit, OnDestroy {
 
   dogs: Dogs = [];
   subscriptions: Subscription[] = [];
-  constructor(private dogRepository : DogApiService) { }
+  constructor(private dogRepository : DogApiService,private router : Router) { }
 
   ngOnInit(): void {
     this.loadDogs();
@@ -55,4 +56,8 @@ export class DogsListComponent implements OnInit, OnDestroy {
   }
 
 
+    OnNavigate() {
+        this.router.navigate(['./','profileAddDog']);
+
+    }
 }
