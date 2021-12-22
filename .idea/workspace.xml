@@ -1,30 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4990668b-8461-4a93-978d-7b33fb4ba4ce" name="Changes" comment="restructuration du projet angular + début de desgin ( ajout de angular material au projet)">
-      <change afterPath="$PROJECT_DIR$/src/app/core/dto/ApiAuthenticationRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/dto/ApiAuthenticationResult.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/guards/authenticated.guard.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/guards/authenticated.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/interceptors/jwt-in.interceptor.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/interceptors/jwt-in.interceptor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/interceptors/jwt-out.interceptor.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/interceptors/jwt-out.interceptor.ts" afterDir="false" />
+    <list default="true" id="4990668b-8461-4a93-978d-7b33fb4ba4ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/models/ride.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/models/ride.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/repositories/user-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/repositories/user-repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/login/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/login/pages/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/login/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/login/pages/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/comment-form/comment-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/comment-form/comment-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/comment-form/comment-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/comment-form/comment-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/profile/components/dogs-list-view/dogs-list-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/profile/components/dogs-list-view/dogs-list-view.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/profile/components/dogs-list-view/dogs-list-view.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/profile/components/dogs-list-view/dogs-list-view.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/profile/pages/dogs-list/dogs-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/profile/pages/dogs-list/dogs-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/profile/profile.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/profile/profile.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/rides/rides.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/rides.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +21,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="structureRabha" />
+        <entry key="$PROJECT_DIR$" value="Authentification" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,7 +58,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/features/register" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
@@ -79,11 +67,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/app/features/register" />
       <recent name="$PROJECT_DIR$/src/app/features/profile" />
       <recent name="$PROJECT_DIR$/src/app/features/notifications" />
       <recent name="$PROJECT_DIR$/src/app/features/messages" />
-      <recent name="$PROJECT_DIR$/src/app/features/map" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/core/dto" />
@@ -151,7 +139,7 @@
       <workItem from="1639842431782" duration="1585000" />
       <workItem from="1639844073137" duration="1843000" />
       <workItem from="1639916357098" duration="1592000" />
-      <workItem from="1640095557899" duration="11046000" />
+      <workItem from="1640095557899" duration="22276000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1636723684561</created>
@@ -174,7 +162,28 @@
       <option name="project" value="LOCAL" />
       <updated>1639862435166</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ajout de l'authentification coter angular">
+      <created>1640110045240</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640110045240</updated>
+    </task>
+    <task id="LOCAL-00005" summary="migration vers scss">
+      <created>1640115520405</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640115520405</updated>
+    </task>
+    <task id="LOCAL-00006" summary="amélioration de l'affichage des balades , ajout d'un foa pour ajouter des balades. styles.scss définie pour crée un thème personnaliser">
+      <created>1640121500055</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640121500055</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +205,10 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="Create branch - test" />
     <MESSAGE value="restructuration du projet angular + début de desgin ( ajout de angular material au projet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="restructuration du projet angular + début de desgin ( ajout de angular material au projet)" />
+    <MESSAGE value="Ajout de l'authentification coter angular" />
+    <MESSAGE value="migration vers scss" />
+    <MESSAGE value="amélioration de l'affichage des balades , ajout d'un foa pour ajouter des balades. styles.scss définie pour crée un thème personnaliser" />
+    <option name="LAST_COMMIT_MESSAGE" value="amélioration de l'affichage des balades , ajout d'un foa pour ajouter des balades. styles.scss définie pour crée un thème personnaliser" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

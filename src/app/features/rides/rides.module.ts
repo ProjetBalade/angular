@@ -8,6 +8,10 @@ import {CommentListComponent} from "./components/comment-list/comment-list.compo
 import {NewRideFormComponent} from "./components/new-ride-form/new-ride-form.component";
 import {RidesListViewComponent} from "./components/rides-list-view/rides-list-view.component";
 import {AgmCoreModule} from "@agm/core";
+import {MatIconModule} from "@angular/material/icon";
+import {MatRippleModule} from "@angular/material/core";
+import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import {AgmCoreModule} from "@agm/core";
       libraries: ['places']
     }),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatIconModule,
+    MatRippleModule,
+    MatButtonModule,
+    MatCardModule
   ]
 })
 export class RidesModule { }

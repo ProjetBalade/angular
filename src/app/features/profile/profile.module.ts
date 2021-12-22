@@ -5,6 +5,10 @@ import { ProfileDetailsComponent } from './pages/profile-details/profile-details
 import {DogFormComponent} from "./components/dog-form/dog-form.component";
 import {DogsListViewComponent} from "./components/dogs-list-view/dogs-list-view.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatRippleModule} from "@angular/material/core";
+import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 
 
@@ -18,10 +22,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     exports: [
         DogsListComponent
     ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule
-    ]
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatRippleModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule
+  ]
 })
 export class ProfileModule { }

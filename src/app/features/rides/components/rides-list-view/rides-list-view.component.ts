@@ -5,7 +5,7 @@ import {Ride, Rides} from "../../../../core/models/ride";
 @Component({
   selector: 'app-rides-list-view',
   templateUrl: './rides-list-view.component.html',
-  styleUrls: ['./rides-list-view.component.css']
+  styleUrls: ['./rides-list-view.component.scss']
 })
 export class RidesListViewComponent implements OnInit {
   @Input() rides: Rides = [];

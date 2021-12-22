@@ -7,7 +7,7 @@ import {ElementToDelete} from "../../../../commons/element-to-delete";
 @Component({
   selector: 'app-rides-list',
   templateUrl: './rides-list.component.html',
-  styleUrls: ['./rides-list.component.css']
+  styleUrls: ['./rides-list.component.scss']
 })
 export class RidesListComponent implements OnInit, OnDestroy {
   rides: Rides = [];

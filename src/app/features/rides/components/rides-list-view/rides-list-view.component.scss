@@ -1,0 +1,15 @@
+
+@use "node_modules/@angular/material" as mat;
+
+.ride-card {
+  margin: 15px;
+  cursor: pointer;
+  &:hover {
+    @include mat.elevation(8);
+  }
+
+}
+
+.ride-card-button{
+  position: revert;
+}
