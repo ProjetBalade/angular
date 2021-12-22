@@ -13,9 +13,7 @@ export class DogFormComponent implements OnInit {
   form: FormGroup = this.fb.group({
     nameDog: ['', Validators.required],
     raceDog:['', Validators.required],
-    dateOfBirth:['', Validators.required,Validators.pattern(/\d{2}\-\d{2}\-\d{4}$/)],
-    idUser:[0, Validators.required]
-
+    dateOfBirth:['', Validators.required,Validators.pattern(/\d{2}\-\d{2}\-\d{4}$/)]
 
   });
   constructor(private fb: FormBuilder) { }
