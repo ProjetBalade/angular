@@ -5,7 +5,7 @@ import {ElementToDelete} from "../../../../commons/element-to-delete";
 @Component({
   selector: 'app-messages-list-view',
   templateUrl: './messages-list-view.component.html',
-  styleUrls: ['./messages-list-view.component.css']
+  styleUrls: ['./messages-list-view.component.scss']
 })
 export class MessagesListViewComponent implements OnInit {
 

@@ -5,7 +5,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 @Component({
   selector: 'app-dog-form',
   templateUrl: './dog-form.component.html',
-  styleUrls: ['./dog-form.component.css']
+  styleUrls: ['./dog-form.component.scss']
 })
 export class DogFormComponent implements OnInit {
   @Output() dogCreated: EventEmitter<Dog> = new EventEmitter<Dog>();

@@ -5,7 +5,7 @@ import {Dog, Dogs} from "../../../../core/models/dog";
 @Component({
   selector: 'app-dogs-list-view',
   templateUrl: './dogs-list-view.component.html',
-  styleUrls: ['./dogs-list-view.component.css']
+  styleUrls: ['./dogs-list-view.component.scss']
 })
 export class DogsListViewComponent implements OnInit {
   @Input() dogs: Dogs = [];

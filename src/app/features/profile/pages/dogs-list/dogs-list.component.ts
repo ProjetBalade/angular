@@ -7,7 +7,7 @@ import {ElementToDelete} from "../../../../commons/element-to-delete";
 @Component({
   selector: 'app-dogs-list',
   templateUrl: './dogs-list.component.html',
-  styleUrls: ['./dogs-list.component.css']
+  styleUrls: ['./dogs-list.component.scss']
 })
 export class DogsListComponent implements OnInit, OnDestroy {
 

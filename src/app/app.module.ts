@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from "@angular/material/tabs";
 import {JwtInInterceptor} from "./core/interceptors/jwt-in.interceptor";
 import {JwtOutInterceptor} from "./core/interceptors/jwt-out.interceptor";
+import {MatCardModule} from "@angular/material/card";
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {JwtOutInterceptor} from "./core/interceptors/jwt-out.interceptor";
   ],
   imports: [
     BrowserModule,
-
+    MatTabsModule,
+    MatCardModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
@@ -33,7 +36,6 @@ import {JwtOutInterceptor} from "./core/interceptors/jwt-out.interceptor";
     LoginModule,
     RegisterModule,
     BrowserAnimationsModule,
-    MatTabsModule
   ],
   providers: [
     {
