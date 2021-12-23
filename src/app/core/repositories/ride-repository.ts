@@ -1,9 +1,11 @@
-import { Observable } from "rxjs";
+import {Observable, ReplaySubject} from "rxjs";
 import {Ride, Rides } from "../models/ride";
 
 export interface RideRepository {
 
-    GetAll(): Observable<Rides>;
+    Reload(): Observable<Rides>;
+
+    GetRides():ReplaySubject<Rides>;
 
     Create(ride: Ride) : Observable<Ride>;
 
