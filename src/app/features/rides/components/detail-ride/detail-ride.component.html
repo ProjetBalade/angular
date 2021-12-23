@@ -1,0 +1,16 @@
+<div class="detail-ride">
+  <mat-card
+    *ngIf="currentSelectedRide">
+    <mat-card-title>{{currentSelectedRide.nameRide}}</mat-card-title>
+    <mat-card-subtitle>{{currentSelectedRide.place}}</mat-card-subtitle>
+    <mat-card-content>
+      difficulté : {{currentSelectedRide.difficulty}}<br>
+      score :{{currentSelectedRide.score}}<br>
+      description :{{currentSelectedRide.description}}<br>
+      horaire :{{currentSelectedRide.schedule}}<br>
+      site web:{{currentSelectedRide.schedule}}<br>
+      liste des commentaires
+      <app-comment-list [currentSelectedRideId]="currentSelectedRide"></app-comment-list>
+    </mat-card-content>
+  </mat-card>
+</div>

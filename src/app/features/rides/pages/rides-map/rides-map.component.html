@@ -25,7 +25,8 @@
 </agm-map>
 
 <div class="ride-details" *ngIf="currentSelectedRide">
-  <p>{{currentSelectedRide.nameRide}}</p>
+<!--  <p>{{currentSelectedRide.nameRide}}</p>-->
+  <app-detail-ride [currentSelectedRide]="currentSelectedRide"></app-detail-ride>
 
   <button (click)="closeRideDetails()">X</button>
 </div>
