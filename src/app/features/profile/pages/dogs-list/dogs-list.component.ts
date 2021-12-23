@@ -67,6 +67,7 @@ export class DogsListComponent implements OnInit, OnDestroy {
       this.dialog.open(DogFormComponent, {
         height: '400px',
         width: '600px',
+
       });
 
     }

@@ -12,6 +12,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatListModule} from "@angular/material/list";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import {MatDialogModule} from "@angular/material/dialog";
         MatButtonModule,
         MatFormFieldModule,
         MatInputModule,
-        MatDialogModule
+        MatDialogModule,
+        MatListModule,
+        MatGridListModule
     ]
 })
 export class ProfileModule { }
