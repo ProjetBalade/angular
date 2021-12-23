@@ -1,6 +1,7 @@
 <agm-map
   #myMap
   [ngClass]="currentSelectedRide ? 'map-with-details' : 'full-page-map'"
+  [zoom]="currentSelectedRide ? 15 : 9"
   [latitude]='centerLatitude()'
   [longitude]='centerLongitude()'
 >

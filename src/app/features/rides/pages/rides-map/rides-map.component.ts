@@ -1,6 +1,6 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Ride, Rides} from "../../../../core/models/ride";
-import {Observable, ReplaySubject, tap} from "rxjs";
+import {Observable, ReplaySubject, Subscription, tap} from "rxjs";
 import {RideService} from "../../../../core/services/ride.service";
 import {AgmMap} from "@agm/core";
 
@@ -9,14 +9,17 @@ import {AgmMap} from "@agm/core";
   templateUrl: './rides-map.component.html',
   styleUrls: ['./rides-map.component.scss']
 })
-export class RidesMapComponent implements OnInit {
+export class RidesMapComponent implements OnInit, OnDestroy {
 
   @ViewChild('myMap')
   private myMap: AgmMap | undefined;
 
   rides$: Observable<Ride[]>;
 
+  @Input()
   currentSelectedRide: Ride | undefined;
+
+  selectedRideSubscription? : Subscription;
 
   constructor(private rideService : RideService) {
     this.rides$ = rideService.GetRides()
@@ -34,13 +37,19 @@ export class RidesMapComponent implements OnInit {
   }
 
   selectRide(ride: Ride) {
-    this.currentSelectedRide = ride;
+    this.rideService.SelectRide(ride);
   }
 
   ngOnInit(): void {
+    this.selectedRideSubscription = this.rideService.GetSelectedRide()
+      .subscribe(r => this.currentSelectedRide = r);
+  }
+
+  ngOnDestroy() {
+    this.selectedRideSubscription?.unsubscribe();
   }
 
   closeRideDetails() {
-    this.currentSelectedRide = undefined;
+    this.rideService.SelectRide(undefined);
   }
 }

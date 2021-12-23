@@ -10,6 +10,17 @@
 
 }
 
+.ride-selected-card {
+  margin: 15px;
+  cursor: pointer;
+  background: #EADDFF;
+  @include mat.elevation(6);
+  &:hover {
+    @include mat.elevation(8);
+  }
+
+}
+
 .ride-card-button{
   position: revert;
 }

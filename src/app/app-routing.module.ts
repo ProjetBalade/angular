@@ -10,7 +10,7 @@ import {LoginComponent} from "./features/login/pages/login/login.component";
 import {RegisterComponent} from "./features/register/pages/register/register.component";
 import {MessageDetailsComponent} from "./features/messages/pages/message-details/message-details.component";
 import {AuthenticatedGuard} from "./core/guards/authenticated.guard";
-
+import {NewRideFormComponent} from "./features/rides/components/new-ride-form/new-ride-form.component"
 const routes: Routes = [
   {
     path: '', redirectTo: 'login', pathMatch: 'full'
@@ -36,6 +36,10 @@ const routes: Routes = [
   {
     canActivate: [AuthenticatedGuard],
     path: 'profile', component: ProfileDetailsComponent
+  },
+  {
+    canActivate: [AuthenticatedGuard],
+    path: 'addRide', component: NewRideFormComponent
   }
 ];
 

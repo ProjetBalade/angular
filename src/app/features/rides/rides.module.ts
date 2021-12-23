@@ -12,6 +12,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatRippleModule} from "@angular/material/core";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {MatCardModule} from "@angular/material/card";
     MatIconModule,
     MatRippleModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ]
 })
 export class RidesModule { }

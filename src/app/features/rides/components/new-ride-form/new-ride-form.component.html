@@ -21,16 +21,9 @@
     <label>Score :
         <input type="number" formControlName="score">
     </label>
-   <label>Latitude :
-        <input type="number" formControlName="latitude">
-   </label>
-   <label>Longitude :
-      <input type="number" formControlName="longitude">
-   </label>
-    <label>ID User :
-        <input type="number" formControlName="idUser">
-    </label>
+
     <input type="submit" [disabled]="form.invalid">
 </form>
 
+<p *ngIf="error">{{ error }}</p>
 

@@ -1,8 +1,11 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {Ride, Rides} from "../../../../core/models/ride";
-import {Subscription} from "rxjs";
+import {Observable, Subscription} from "rxjs";
 import {RideService} from "../../../../core/services/ride.service";
 import {ElementToDelete} from "../../../../commons/element-to-delete";
+import {Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
+import {NewRideFormComponent} from "../../components/new-ride-form/new-ride-form.component";
 
 @Component({
   selector: 'app-rides-list',
@@ -13,10 +16,18 @@ export class RidesListComponent implements OnInit, OnDestroy {
   rides: Rides = [];
   subscriptions: Subscription[] = [];
 
-  constructor(private rideRepository : RideService) { }
+  selectedRide?: Ride;
+
+  constructor(
+    private dialog: MatDialog,
+    private rideRepository : RideService) {
+  }
 
   ngOnInit(): void {
     this.loadRides();
+    this.subscriptions.push(this.rideRepository.GetSelectedRide().subscribe(r => {
+      this.selectedRide = r;
+    }));
   }
 
   ngOnDestroy(): void {
@@ -52,5 +63,16 @@ export class RidesListComponent implements OnInit, OnDestroy {
         this.rideRepository.Update(ride.id, ride)
             .subscribe()
     );
+  }
+  goToAddRide(){
+    this.dialog.open(NewRideFormComponent, {
+      height: '400px',
+      width: '600px',
+    });
+
+  }
+
+  rideClick(ride: Ride) {
+    this.rideRepository.SelectRide(ride);
   }
 }
