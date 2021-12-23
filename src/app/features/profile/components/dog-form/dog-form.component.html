@@ -19,7 +19,7 @@
 
     <input type="submit" [disabled]="form.invalid" >
 </form>
-
+<p *ngIf="error">{{ error }}</p>
 <!--
 
 <form class="createDog" [formGroup]="form" (ngSubmit)="submit()">

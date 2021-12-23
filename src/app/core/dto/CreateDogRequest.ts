@@ -1,8 +1,7 @@
 export interface CreateDogRequest {
-    nameDog: string;
-    raceDog: string;
-    dateOfBirth: any;
-
+    nameDog: string,
+    raceDog: string,
+    dateOfBirth: string
 }
 
 

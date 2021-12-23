@@ -1,9 +1,11 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Dog, Dogs} from "../../../../core/models/dog";
-import {Subscription} from "rxjs";
+import {Observable, Subscription, tap} from "rxjs";
 import {DogApiService} from "../../../../core/services/dog-api.service";
 import {ElementToDelete} from "../../../../commons/element-to-delete";
 import {Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
+import {DogFormComponent} from "../../components/dog-form/dog-form.component";
 
 @Component({
   selector: 'app-dogs-list',
@@ -12,9 +14,14 @@ import {Router} from "@angular/router";
 })
 export class DogsListComponent implements OnInit, OnDestroy {
 
-  dogs: Dogs = [];
+  doglist$: Observable<Dog[]>;
   subscriptions: Subscription[] = [];
-  constructor(private dogRepository : DogApiService,private router : Router) { }
+  constructor(private dogRepository : DogApiService
+              ,private router : Router
+              ,private dialog: MatDialog,
+  ) {
+    this.doglist$ = dogRepository.GetAll();
+  }
 
   ngOnInit(): void {
     this.loadDogs();
@@ -25,8 +32,8 @@ export class DogsListComponent implements OnInit, OnDestroy {
 
   private loadDogs() {
     this.subscriptions.push(
-      this.dogRepository.GetAll()
-        .subscribe(dogs => this.dogs = dogs)
+      this.dogRepository.Load()
+        .subscribe(dogs => {})
     );
   }
 
@@ -35,16 +42,15 @@ export class DogsListComponent implements OnInit, OnDestroy {
   createDog(dog: Dog) {
     this.subscriptions.push(
       this.dogRepository.Create(dog)
-        .subscribe(dog => this.dogs.push(dog))
+        .subscribe(dog => {})
     );
   }
 
   deleteDog(elementToDelete: ElementToDelete<Dog>) {
-    const DELETE_DOG_FROM_LIST = () => this.dogs.splice(elementToDelete.index, 1);
     this.subscriptions.push(
       this.dogRepository
         .Delete(elementToDelete.element.id)
-        .subscribe(DELETE_DOG_FROM_LIST)
+        .subscribe(() => {})
     );
   }
 
@@ -57,7 +63,11 @@ export class DogsListComponent implements OnInit, OnDestroy {
 
 
     OnNavigate() {
-        this.router.navigate(['./','profileAddDog']);
+        //this.router.navigate(['./','profileAddDog']);
+      this.dialog.open(DogFormComponent, {
+        height: '400px',
+        width: '600px',
+      });
 
     }
 }
