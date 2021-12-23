@@ -5,6 +5,8 @@ import { Rides, Ride } from '../models/ride';
 import {RideRepository} from '../repositories/ride-repository';
 import {HttpClient} from "@angular/common/http";
 import {CreateRideRequest} from "../dto/CreateRideRequest";
+import {Comments} from "../models/comment";
+import {CommentApiService} from "./comment-api.service";
 
 @Injectable({
   providedIn: 'root'
@@ -56,5 +58,9 @@ export class RideService implements RideRepository {
 
   SelectRide(ride: Ride|undefined): void {
     this.selectedRide.next(ride);
+  }
+
+  GetComments(id: number | undefined): Observable<Comments> {
+    return this.http.get<Comments>(RideService.URL+'/'+id+'/comments');
   }
 }

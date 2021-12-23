@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4990668b-8461-4a93-978d-7b33fb4ba4ce" name="Changes" comment="zoom sur la balade lorsque l'on clique sur le pointeur google map ou sur une des balade de la liste + mise en surbrillance de celle que l'utilisateur a choisi">
-      <change afterPath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.ts" afterDir="false" />
+    <list default="true" id="4990668b-8461-4a93-978d-7b33fb4ba4ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/repositories/comment-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/repositories/comment-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/repositories/ride-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/repositories/ride-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/services/comment-api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/comment-api.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/services/ride.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/ride.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/comment-list/comment-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/comment-list/comment-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/comment-list/comment-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/comment-list/comment-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/rides/rides.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/rides.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +150,7 @@
       <workItem from="1640205720785" duration="5554000" />
       <workItem from="1640212964695" duration="9000" />
       <workItem from="1640254086774" duration="4697000" />
-      <workItem from="1640280201443" duration="7866000" />
+      <workItem from="1640280201443" duration="14181000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1636723684561</created>
@@ -197,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640284349808</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Sauvegarde avant changement pour l'affichage des commentaires. + ajout de l'affichage des détails sur les balades">
+      <created>1640289379417</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640289379417</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +234,8 @@
     <MESSAGE value="migration vers scss" />
     <MESSAGE value="amélioration de l'affichage des balades , ajout d'un foa pour ajouter des balades. styles.scss définie pour crée un thème personnaliser" />
     <MESSAGE value="refactore d'ajout des chiens d'aleyna  + ajout d'une fenetre &quot;pop up&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactore d'ajout des chiens d'aleyna  + ajout d'une fenetre &quot;pop up&quot;" />
+    <MESSAGE value="Sauvegarde avant changement pour l'affichage des commentaires. + ajout de l'affichage des détails sur les balades" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sauvegarde avant changement pour l'affichage des commentaires. + ajout de l'affichage des détails sur les balades" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

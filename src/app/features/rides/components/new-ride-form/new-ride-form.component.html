@@ -1,28 +1,45 @@
 <h2>Create a ride</h2>
 <form [formGroup]="form" (ngSubmit)="submit()" class="add_ride_form">
-    <label>Name of the Ride :
-        <input type="text" formControlName="nameRide">
-    </label>
-    <label>Place :
-        <input type="text" formControlName="place">
-    </label>
-    <label>Description :
-        <input type="text" formControlName="description">
-    </label>
-    <label>Website :
-        <input type="text" formControlName="website">
-    </label>
-    <label>Difficulty :
-        <input type="number" formControlName="difficulty">
-    </label>
-    <label>Schedule :
-        <input type="text" formControlName="schedule">
-    </label>
-    <label>Score :
-        <input type="number" formControlName="score">
-    </label>
+  <mat-form-field class="name_ride" appearance="fill">
+    <mat-label>Name of the Ride :</mat-label>
+    <input matInput type="text" formControlName="nameRide">
+  </mat-form-field>
+  <p>
+    <mat-form-field class="name_ride" appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput type="text" formControlName="place">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="name_ride" appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput type="text" formControlName="description">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="name_ride" appearance="fill">
+      <mat-label>Site web</mat-label>
+      <input matInput type="text" formControlName="website">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="name_ride" appearance="fill">
+      <mat-label>Horaire</mat-label>
+      <input matInput type="text" formControlName="schedule">
+    </mat-form-field>
+  </p>
 
-    <input type="submit" [disabled]="form.invalid">
+  <table class="name_ride" cellspacing="0"><tr>
+    <td><mat-form-field class="name_ride" appearance="fill">
+      <mat-label>Difficulter</mat-label>
+      <input matInput type="number" formControlName="difficulty">
+    </mat-form-field></td>
+    <td><mat-form-field class="name_ride" appearance="fill">
+      <mat-label>Score</mat-label>
+      <input matInput type="number" formControlName="score">
+    </mat-form-field></td>
+  </tr></table>
+    <input  type="submit" [disabled]="form.invalid">
 </form>
 
 <p *ngIf="error">{{ error }}</p>

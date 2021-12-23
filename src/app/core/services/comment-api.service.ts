@@ -24,7 +24,7 @@ export class CommentApiService implements CommentRepository {
     return this.http.delete(CommentApiService.URL + '/' + id);
   }
 
-  getAll(): Observable<Comments> {
+  getAll(id: number | undefined): Observable<Comments> {
     return this.http.get<Comments>(CommentApiService.URL);
   }
 

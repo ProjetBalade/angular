@@ -1,16 +1,6 @@
 <h2>La liste des commentaires</h2>
-<div *ngIf="currentSelectedRideId">
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Content</th>
-            <th>Score</th>
-            <th>Difficulty</th>
-            <th>IdUser</th>
-            <th>IdRide</th>
-        </tr>
-        </thead>
+<div *ngIf="comments">
+
         <tbody>
         <tr *ngFor="let comment of comments; let index = index;">
             <td>
@@ -39,5 +29,5 @@
             </td>
         </tr>
         </tbody>
-    </table>
+
 </div>

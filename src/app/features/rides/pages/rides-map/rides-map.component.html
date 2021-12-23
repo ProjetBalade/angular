@@ -26,7 +26,7 @@
 
 <div class="ride-details" *ngIf="currentSelectedRide">
 <!--  <p>{{currentSelectedRide.nameRide}}</p>-->
+  <button class="close_comment_button" mat-raised-button color="primary" (click)="closeRideDetails()"><mat-icon>close</mat-icon></button>
   <app-detail-ride [currentSelectedRide]="currentSelectedRide"></app-detail-ride>
 
-  <button (click)="closeRideDetails()">X</button>
 </div>

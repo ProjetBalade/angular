@@ -11,16 +11,14 @@ import {Ride} from "../../../../core/models/ride";
 export class CommentListComponent implements OnInit {
 
   @Input()
-  currentSelectedRideId: Ride | undefined;
-  @Input()
   comments: Comments = [];
+
   @Output()
   commentDeleted: EventEmitter<ElementToDelete<Comment>> = new EventEmitter<ElementToDelete<Comment>>();
   @Output()
   commentChanged: EventEmitter<Comment> = new EventEmitter<Comment>();
 
   constructor() {
-    this.currentSelectedRideId = undefined;
   }
 
   ngOnInit(): void {

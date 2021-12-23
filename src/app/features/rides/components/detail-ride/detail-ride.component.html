@@ -1,4 +1,4 @@
-<div class="detail-ride">
+<div class="detail_ride">
   <mat-card
     *ngIf="currentSelectedRide">
     <mat-card-title>{{currentSelectedRide.nameRide}}</mat-card-title>
@@ -8,9 +8,9 @@
       score :{{currentSelectedRide.score}}<br>
       description :{{currentSelectedRide.description}}<br>
       horaire :{{currentSelectedRide.schedule}}<br>
-      site web:{{currentSelectedRide.schedule}}<br>
+      site web:{{currentSelectedRide.website}}<br>
       liste des commentaires
-      <app-comment-list [currentSelectedRideId]="currentSelectedRide"></app-comment-list>
+      <app-comment-list *ngIf="comments$ | async as comments" [comments]="comments"></app-comment-list>
     </mat-card-content>
   </mat-card>
 </div>

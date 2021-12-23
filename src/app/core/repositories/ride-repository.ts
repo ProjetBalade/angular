@@ -1,6 +1,7 @@
 import {Observable, ReplaySubject} from "rxjs";
 import {Ride, Rides } from "../models/ride";
 import {CreateRideRequest} from "../dto/CreateRideRequest";
+import {Comments} from "../models/comment";
 
 export interface RideRepository {
 
@@ -19,4 +20,6 @@ export interface RideRepository {
     SelectRide(ride: Ride): void;
 
     GetSelectedRide(): Observable<Ride|undefined>;
+
+    GetComments(id: number | undefined): Observable<Comments>;
 }
