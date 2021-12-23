@@ -6,6 +6,7 @@ import {UserRepository} from '../repositories/user-repository';
 import {HttpClient} from "@angular/common/http";
 import {ApiAuthenticationResult} from "../dto/ApiAuthenticationResult";
 import {ApiAuthenticationRequest} from "../dto/ApiAuthenticationRequest";
+import {CreateUserRequest} from "../dto/CreateUserRequest";
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +36,7 @@ export class UserService implements UserRepository {
     return this.http.get<User>(UserService.URL+'/'+id);
   }
 
-  Create(user: User): Observable<User> {
+  Create(user: CreateUserRequest): Observable<User> {
     return this.http.post<User>(UserService.URL + '/create', user);
   }
   Delete(id: number): Observable<any> {
