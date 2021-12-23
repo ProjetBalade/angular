@@ -1,6 +1,9 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Dog} from "../../../../core/models/dog";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {CreateDogRequest} from "../../../../core/dto/CreateDogRequest";
+import {DogApiService} from "../../../../core/services/dog-api.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dog-form',
@@ -13,15 +16,21 @@ export class DogFormComponent implements OnInit {
   form: FormGroup = this.fb.group({
     nameDog: ['', Validators.required],
     raceDog:['', Validators.required],
-    dateOfBirth:['', Validators.required,Validators.pattern(/\d{2}\-\d{2}\-\d{4}$/)]
+    dateOfBirth:['', Validators.required]
+
 
   });
-  constructor(private fb: FormBuilder) { }
+
+  constructor(private fb: FormBuilder,private router : Router) { }
 
   ngOnInit(): void {
   }
 
   submit() {
+
     this.dogCreated.emit(this.form.value);
+
   }
+
+
 }

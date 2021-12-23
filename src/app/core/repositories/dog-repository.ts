@@ -1,5 +1,6 @@
 import {Observable} from "rxjs";
 import {Dog, Dogs} from "../models/dog";
+import {CreateDogRequest} from "../dto/CreateDogRequest";
 
 export interface DogRepository {
 

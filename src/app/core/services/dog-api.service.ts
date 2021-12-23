@@ -4,6 +4,7 @@ import {DogRepository} from "../repositories/dog-repository";
 import {Dog, Dogs} from "../models/dog";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
+import {CreateDogRequest} from "../dto/CreateDogRequest";
 
 @Injectable({
   providedIn: 'root'

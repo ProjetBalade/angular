@@ -11,6 +11,7 @@ import {RegisterComponent} from "./features/register/pages/register/register.com
 import {MessageDetailsComponent} from "./features/messages/pages/message-details/message-details.component";
 import {AuthenticatedGuard} from "./core/guards/authenticated.guard";
 import {DogFormComponent} from "./features/profile/components/dog-form/dog-form.component";
+import {DogsListComponent} from "./features/profile/pages/dogs-list/dogs-list.component";
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     canActivate: [AuthenticatedGuard],
     path: 'profileAddDog', component: DogFormComponent
+  },
+  {
+    canActivate: [AuthenticatedGuard],
+    path: 'CreateDog', component: DogsListComponent
   }
 
 ];
