@@ -1,16 +1,18 @@
 <div class="detail_ride">
-  <mat-card
+<ng-container
     *ngIf="currentSelectedRide">
-    <mat-card-title>{{currentSelectedRide.nameRide}}</mat-card-title>
-    <mat-card-subtitle>{{currentSelectedRide.place}}</mat-card-subtitle>
-    <mat-card-content>
+  <div class="detail">
+    <h1>{{currentSelectedRide.nameRide}}</h1>
+    <h2>{{currentSelectedRide.place}}</h2>
+
       difficulté : {{currentSelectedRide.difficulty}}<br>
       score :{{currentSelectedRide.score}}<br>
       description :{{currentSelectedRide.description}}<br>
       horaire :{{currentSelectedRide.schedule}}<br>
       site web:{{currentSelectedRide.website}}<br>
-      liste des commentaires
-      <app-comment-list *ngIf="comments$ | async as comments" [comments]="comments"></app-comment-list>
-    </mat-card-content>
-  </mat-card>
+    <app-comment-list *ngIf="comments$ | async as comments" [comments]="comments"></app-comment-list>
+
+  </div>
+</ng-container>
+
 </div>
