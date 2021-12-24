@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4990668b-8461-4a93-978d-7b33fb4ba4ce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/repositories/comment-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/repositories/comment-repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/repositories/ride-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/repositories/ride-repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/services/comment-api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/comment-api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/services/ride.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/ride.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/comment-list/comment-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/comment-list/comment-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/comment-list/comment-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/comment-list/comment-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/detail-ride/detail-ride.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/profile/pages/profile-details/profile-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/profile/pages/profile-details/profile-details.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/pages/rides-map/rides-map.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/rides/rides.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/rides.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +143,7 @@
       <workItem from="1640212964695" duration="9000" />
       <workItem from="1640254086774" duration="4697000" />
       <workItem from="1640280201443" duration="14181000" />
+      <workItem from="1640357825010" duration="402000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1636723684561</created>
