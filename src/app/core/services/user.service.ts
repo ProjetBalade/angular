@@ -6,6 +6,8 @@ import {UserRepository} from '../repositories/user-repository';
 import {HttpClient} from "@angular/common/http";
 import {ApiAuthenticationResult} from "../dto/ApiAuthenticationResult";
 import {ApiAuthenticationRequest} from "../dto/ApiAuthenticationRequest";
+import {CreateUserRequest} from "../dto/CreateUserRequest";
+import jwtDecode from "jwt-decode";
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +19,15 @@ export class UserService implements UserRepository {
 
   constructor(private http: HttpClient) {
     this._token = undefined;
+  }
+
+  isAdmin(): boolean {
+    if (this._token != null) {
+      let decodedToken = jwtDecode(this._token);
+      // @ts-ignore
+      return decodedToken['role'] === 'admin';
+    }
+    return false;
   }
 
   get token(): string | undefined {
@@ -35,7 +46,7 @@ export class UserService implements UserRepository {
     return this.http.get<User>(UserService.URL+'/'+id);
   }
 
-  Create(user: User): Observable<User> {
+  Create(user: CreateUserRequest): Observable<User> {
     return this.http.post<User>(UserService.URL + '/create', user);
   }
   Delete(id: number): Observable<any> {
@@ -49,6 +60,8 @@ export class UserService implements UserRepository {
     const apiAuthenticationRequest : ApiAuthenticationRequest = { name, password };
     return this.http.post<ApiAuthenticationResult>(UserService.URL + '/Authenticate', apiAuthenticationRequest );
   }
+
+
 
 
 }

@@ -1,43 +1,12 @@
 <h2>La liste des commentaires</h2>
-<div>
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Content</th>
-            <th>Score</th>
-            <th>Difficulty</th>
-            <th>IdUser</th>
-            <th>IdRide</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let comment of comments; let index = index;">
-            <td>
-                {{comment.id}}
-            </td>
-            <td>
-                {{comment.content}}
-            </td>
-            <td>
-                {{comment.score}}
-            </td>
-            <td>
-                {{comment.difficulty}}
-            </td>
-            <td>
-                {{comment.idUser}}
-            </td>
-            <td>
-                {{comment.idRide}}
-            </td>
-            <td>
-                <button (click)="delete(comment, index)">Delete</button>
-            </td>
-            <td>
-                <button (click)="update(comment)">Modify</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+<div *ngIf="comments">
+
+  <mat-card *ngFor="let comment of comments; let index = index;" class="commentaire_card">
+    <mat-card-content>{{comment.content}}</mat-card-content>
+    <mat-card-content>
+      difficulté : {{comment.difficulty}}
+      score : {{comment.score}}<br>
+    </mat-card-content>
+  </mat-card>
+
 </div>

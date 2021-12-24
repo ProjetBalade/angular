@@ -12,6 +12,10 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatRippleModule} from "@angular/material/core";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
+import {MatDialogModule} from "@angular/material/dialog";
+import { DetailRideComponent } from './components/detail-ride/detail-ride.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import {MatCardModule} from "@angular/material/card";
     NewRideFormComponent,
     RidesListViewComponent,
     RidesListComponent,
-    RidesMapComponent
+    RidesMapComponent,
+    DetailRideComponent
   ],
   exports: [
     CommentFormComponent,
@@ -41,7 +46,10 @@ import {MatCardModule} from "@angular/material/card";
     MatIconModule,
     MatRippleModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class RidesModule { }

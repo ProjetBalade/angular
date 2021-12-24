@@ -3,7 +3,7 @@ export interface Dog {
     id: number;
     nameDog: string;
     raceDog: string;
-    dateOfBirth: any;
+    dateOfBirth: string;
     idUser:number;
 }
 export declare type Dogs = Dog[];

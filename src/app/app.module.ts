@@ -13,18 +13,24 @@ import {LoginModule} from "./features/login/login.module";
 import {RegisterModule} from "./features/register/register.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatInputModule} from '@angular/material/input';
 import {JwtInInterceptor} from "./core/interceptors/jwt-in.interceptor";
 import {JwtOutInterceptor} from "./core/interceptors/jwt-out.interceptor";
 import {MatCardModule} from "@angular/material/card";
+import { AdminComponent } from './features/admin/pages/admin/admin.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
   declarations: [
     AppRoutingModule.components,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
     MatTabsModule,
+    MatInputModule,
     MatCardModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -36,6 +42,8 @@ import {MatCardModule} from "@angular/material/card";
     LoginModule,
     RegisterModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [
     {

@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Comment, Comments} from "../../../../core/models/comment";
 import {ElementToDelete} from "../../../../commons/element-to-delete";
+import {Ride} from "../../../../core/models/ride";
 
 @Component({
   selector: 'app-comment-list',
@@ -11,12 +12,14 @@ export class CommentListComponent implements OnInit {
 
   @Input()
   comments: Comments = [];
+
   @Output()
   commentDeleted: EventEmitter<ElementToDelete<Comment>> = new EventEmitter<ElementToDelete<Comment>>();
   @Output()
   commentChanged: EventEmitter<Comment> = new EventEmitter<Comment>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
