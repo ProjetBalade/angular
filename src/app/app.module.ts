@@ -16,11 +16,15 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {JwtInInterceptor} from "./core/interceptors/jwt-in.interceptor";
 import {JwtOutInterceptor} from "./core/interceptors/jwt-out.interceptor";
 import {MatCardModule} from "@angular/material/card";
+import { AdminComponent } from './features/admin/pages/admin/admin.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
   declarations: [
     AppRoutingModule.components,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,8 @@ import {MatCardModule} from "@angular/material/card";
     LoginModule,
     RegisterModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [
     {

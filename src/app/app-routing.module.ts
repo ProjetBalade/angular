@@ -11,14 +11,19 @@ import {RegisterComponent} from "./features/register/pages/register/register.com
 import {MessageDetailsComponent} from "./features/messages/pages/message-details/message-details.component";
 import {AuthenticatedGuard} from "./core/guards/authenticated.guard";
 import {NewRideFormComponent} from "./features/rides/components/new-ride-form/new-ride-form.component"
+import {AdminComponent} from "./features/admin/pages/admin/admin.component";
+import {AdministratorGuard} from "./core/guards/administrator.guard";
+import {NotAuthenticatedGuard} from "./core/guards/not-authenticated.guard";
 const routes: Routes = [
   {
     path: '', redirectTo: 'login', pathMatch: 'full'
   },
   {
+    canActivate: [NotAuthenticatedGuard],
     path: 'login', component: LoginComponent
   },
   {
+    canActivate: [NotAuthenticatedGuard],
     path: 'register', component: RegisterComponent
   },
   {
@@ -40,6 +45,10 @@ const routes: Routes = [
   {
     canActivate: [AuthenticatedGuard],
     path: 'addRide', component: NewRideFormComponent
+  },
+  {
+    canActivate: [AuthenticatedGuard,AdministratorGuard],
+    path: 'admin', component: AdminComponent
   }
 ];
 

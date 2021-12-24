@@ -12,3 +12,4 @@
   <router-outlet [ngClass]="shouldShowLeftMenu() ? 'right-content' : 'full-page-content'" id="right-content"></router-outlet>
 </div>
 
+<button *ngIf="isAdmin()" mat-fab color="warn" class="admin-button" [routerLink]="switchAdminRoute()"><mat-icon>admin_panel_settings</mat-icon></button>

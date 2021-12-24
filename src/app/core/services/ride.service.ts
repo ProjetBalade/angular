@@ -39,11 +39,7 @@ export class RideService implements RideRepository {
   }
 
   Create(ride: CreateRideRequest): Observable<Ride> {
-    return this.http.post<Ride>(RideService.URL, ride)
-      .pipe(tap(newRide => {
-        this.lastRetrievedRides.push(newRide);
-        this.rides.next(this.lastRetrievedRides);
-      }));
+    return this.http.post<Ride>(RideService.URL, ride);
   }
   Delete(id: number): Observable<any> {
     return this.http.delete(RideService.URL+ '/' + id);
@@ -62,5 +58,17 @@ export class RideService implements RideRepository {
 
   GetComments(id: number | undefined): Observable<Comments> {
     return this.http.get<Comments>(RideService.URL+'/'+id+'/comments');
+  }
+
+  GetAllPendingRide(): Observable<Rides> {
+    return this.http.get<Rides>(RideService.URL+'/pending');
+  }
+
+  RefuseRide(id: number): Observable<boolean> {
+    return this.http.post<boolean>(RideService.URL+ '/' + id+'/refuse', {});
+  }
+
+  ValidateRide(id: number): Observable<Ride> {
+    return this.http.post<Ride>(RideService.URL+ '/' + id +'/accept', {});
   }
 }

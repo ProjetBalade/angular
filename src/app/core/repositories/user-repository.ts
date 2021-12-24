@@ -16,4 +16,8 @@ export interface UserRepository {
 
     Authenticate(name : string, password : string) : Observable<ApiAuthenticationResult>;
 
+    isAdmin(): boolean;
+
+
+
 }

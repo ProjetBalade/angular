@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {MatTabChangeEvent} from "@angular/material/tabs";
 import {Router} from "@angular/router";
+import {UserService} from "./core/services/user.service";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ export class AppComponent {
   ]
 
   constructor(
-    public router : Router) {
+    public router : Router,
+    private userService : UserService) {
   }
 
   onTabChanged(event: MatTabChangeEvent): void{
@@ -38,5 +40,16 @@ export class AppComponent {
   shouldShowLeftMenu(): boolean {
     const currentUrl = this.router.url;
     return this.routesWhereLeftMenuIsShown.some(v => currentUrl.indexOf(v) !== -1);
+  }
+
+  isAdmin() {
+    return this.userService.isAdmin();
+  }
+
+  switchAdminRoute() {
+    if(this.router.url.endsWith('admin')) {
+      return '/rides';
+    }
+    return '/admin';
   }
 }
