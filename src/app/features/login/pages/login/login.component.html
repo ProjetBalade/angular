@@ -1,23 +1,25 @@
-
+<div class="center">
+  <h2>Connectez-vous !</h2>
 <form [formGroup]="form" (ngSubmit)="login()">
-  <fieldset>
-    <legend>Connexion</legend>
+<div>
+  <img src="assets/userIcon.png" alt="image"/>
+</div>
     <div>
-      <label> Nom d'utilisateur :
-        <input type="text" formControlName="username">
-      </label>
+      <mat-form-field class="loginForm" appearance="fill">
+        <mat-label>Nom d'utilisateur :</mat-label>
+        <input matInput type="text" formControlName="username">
+      </mat-form-field>
     </div>
     <div>
-      <label> Mot de passe :
-        <input type="password" formControlName="password">
-      </label>
+        <mat-form-field class="loginForm" appearance="fill">
+          <mat-label>Mot de passe :</mat-label>
+          <input matInput  type="password" formControlName="password">
+        </mat-form-field>
     </div>
-    <input type="submit" [disabled]="form.invalid">
-  </fieldset>
+    <button mat-raised-button color="primary" type="submit" class="loginForm" [disabled]="form.invalid">Valider</button>
 
 </form>
 <a [routerLink]="'/register'">Créer un compte</a>
 <p *ngIf="error">{{ error }}</p>
-
-
+</div>
 
