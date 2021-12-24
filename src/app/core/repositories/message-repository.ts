@@ -1,12 +1,15 @@
 import {Observable} from "rxjs";
 import {Message, Messages} from "../models/message";
+import {CreateMessageRequest} from "../dto/CreateMessageRequest";
 
 export interface MessageRepository {
-    query() : Observable<Messages>;
+    Query() : Observable<Messages>;
 
-    create(message: Message): Observable<Message>;
+    GetById(id : number) : Observable<Message>;
 
-    delete(id: number): Observable<any>;
+    Create(message: CreateMessageRequest): Observable<Message>;
 
-    update(id: number, message: Message): Observable<any>;
+    Delete(id: number): Observable<any>;
+
+    Update(id: number, message: Message): Observable<any>;
 }

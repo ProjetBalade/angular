@@ -1,8 +1,8 @@
 export interface Message {
     id: number;
+    content : string;
     idRecipient : number;
     idSender : number;
-    content : string;
     object : string;
 }
 

@@ -19,6 +19,7 @@ import {JwtOutInterceptor} from "./core/interceptors/jwt-out.interceptor";
 import {MatCardModule} from "@angular/material/card";
 
 
+
 @NgModule({
   declarations: [
     AppRoutingModule.components,
@@ -37,7 +38,7 @@ import {MatCardModule} from "@angular/material/card";
     ProfileModule,
     LoginModule,
     RegisterModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
