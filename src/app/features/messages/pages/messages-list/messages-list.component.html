@@ -1,0 +1,5 @@
+<app-message-form (messageCreated)="postMessage($event)"></app-message-form>
+<app-messages-list-view
+        [messages]="messages"
+        (messageDeleted)="deleteMessage($event)"
+        (messageChanged)="updateMessage($event)"></app-messages-list-view>

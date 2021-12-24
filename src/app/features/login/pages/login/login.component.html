@@ -1,0 +1,23 @@
+
+<form [formGroup]="form" (ngSubmit)="login()">
+  <fieldset>
+    <legend>Connexion</legend>
+    <div>
+      <label> Nom d'utilisateur :
+        <input type="text" formControlName="username">
+      </label>
+    </div>
+    <div>
+      <label> Mot de passe :
+        <input type="password" formControlName="password">
+      </label>
+    </div>
+    <input type="submit" [disabled]="form.invalid">
+  </fieldset>
+
+</form>
+<a [routerLink]="'/register'">Créer un compte</a>
+<p *ngIf="error">{{ error }}</p>
+
+
+

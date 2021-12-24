@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="register()">
+  <fieldset>
+    <legend>Inscription</legend>
+    <div>
+      <label> Nom d'utilisateur :
+        <input type="text" formControlName="name">
+      </label>
+    </div>
+    <div>
+      <label> Email :
+        <input type="text" formControlName="email" email>
+      </label>
+    </div>
+    <div>
+      <label> Mot de passe :
+        <input type="password" formControlName="password">
+      </label>
+    </div>
+    <input type="submit" [disabled]="form.invalid">
+  </fieldset>
+
+</form>
+
+<p *ngIf="error">{{ error }}</p>
