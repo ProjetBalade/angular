@@ -1,25 +1,25 @@
 <h2>Création de Messages !</h2>
 <form [formGroup]="form" (ngSubmit)="submit()">
     <fieldset>
-        <legend>New message</legend>
+        <legend>Nouveau message</legend>
         <div>
             <textarea formControlName="content"
                       rows="5" cols="200"
-                      placeholder="insert a message">
+                      placeholder="Insérer un message">
             </textarea>
         </div>
         <div>
-            <label> idRecipient :
+            <label> Destinataire :
                 <input type="number" min= 0 formControlName="idRecipient">
             </label>
         </div>
         <div>
-            <label> idSender :
+            <label> Expéditeur :
                 <input type="number" min= 0 formControlName="idSender">
             </label>
         </div>
         <div>
-            <label> Object :
+            <label> Objet :
                 <input type="text" formControlName="object">
             </label>
         </div>

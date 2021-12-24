@@ -5,13 +5,13 @@
         <thead>
         <tr>
             <th>id</th>
-            <th>Content</th>
-            <th>idRecipient</th>
-            <th>idSender</th>
-            <th>Object</th>
+            <th>Description</th>
+            <th>Destinataire</th>
+            <th>Expéditeur</th>
+            <th>Objet</th>
 
-            <th>Update</th>
-            <th>Cancel</th>
+            <th>Modifier</th>
+            <th>Annuler</th>
         </tr>
         </thead>
         <tbody>
@@ -24,10 +24,10 @@
             <td>{{message.object}}</td>
 
             <td>
-                <button (click)="update(message)">Update</button>
+                <button (click)="update(message)">Modifier</button>
             </td>
             <td>
-                <button (click)="delete(message, index)">Cancel</button>
+                <button (click)="delete(message, index)">Annuler</button>
             </td>
         </tr>
         </tbody>
