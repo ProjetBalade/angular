@@ -10,7 +10,7 @@ import {Comment, Comments} from '../models/comment';
 })
 export class CommentApiService implements CommentRepository {
 
- static readonly URL: string = environment.serverAddress + 'api/dbBalade/Comment';
+ static readonly URL: string = environment.serverAddress + 'api/comments';
 
   constructor(private http: HttpClient) {
 

@@ -57,7 +57,7 @@ export class RideService implements RideRepository {
   }
 
   GetComments(id: number | undefined): Observable<Comments> {
-    return this.http.get<Comments>(RideService.URL+'/'+id+'/comments');
+    return this.http.get<Comments>(CommentApiService.URL+'/rides/' + id);
   }
 
   GetAllPendingRide(): Observable<Rides> {
