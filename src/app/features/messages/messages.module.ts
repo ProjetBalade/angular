@@ -5,6 +5,15 @@ import {MessagesListComponent} from "./pages/messages-list/messages-list.compone
 import {MessagesListViewComponent} from "./components/messages-list-view/messages-list-view.component";
 import {MessageFormComponent} from "./components/message-form/message-form.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatRippleModule} from "@angular/material/core";
+import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
     declarations: [
@@ -19,7 +28,16 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     imports: [
         CommonModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatRippleModule,
+        MatCardModule,
+        MatIconModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDialogModule,
+        MatGridListModule,
+        MatListModule
     ]
 })
 export class MessagesModule { }

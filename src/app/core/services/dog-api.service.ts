@@ -11,8 +11,10 @@ import {CreateDogRequest} from "../dto/CreateDogRequest";
 })
 export class DogApiService implements DogRepository{
   static readonly URL: string = environment.serverAddress + 'api/dog';
+
   private lastRetrievedDog: Dog[];
   private dogs : ReplaySubject<Dog[]>;
+
   constructor(private http: HttpClient) {
     this.dogs= new ReplaySubject<Dog[]>();
     this.lastRetrievedDog = [];

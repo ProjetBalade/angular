@@ -1,35 +1,14 @@
 <h2>Liste des messages !</h2>
 
-<div>
-    <table>
-        <thead>
-        <tr>
-            <th>id</th>
-            <th>Content</th>
-            <th>idRecipient</th>
-            <th>idSender</th>
-            <th>Object</th>
 
-            <th>Update</th>
-            <th>Cancel</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let message of messages; let index = index;">
+<div class="scrollable">
 
-            <td>{{message.id}}</td>
-            <td>{{message.content}}</td>
-            <td>{{message.idRecipient}}</td>
-            <td>{{message.idSender}}</td>
-            <td>{{message.object}}</td>
+    <mat-card class="message-card" *ngFor="let message of messages; let index = index;" matRipple >
+        <mat-card-title>{{message.object}}</mat-card-title>
+        <mat-card-subtitle>{{message.idRecipient}}</mat-card-subtitle>
+        <mat-card-content>{{message.content}}</mat-card-content>
+        <button class="message-button" (click)="delete(message, index)" mat-fab color="primary" ><mat-icon>delete</mat-icon></button>
+    </mat-card>
 
-            <td>
-                <button (click)="update(message)">Update</button>
-            </td>
-            <td>
-                <button (click)="delete(message, index)">Cancel</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
 </div>
+
