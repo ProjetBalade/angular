@@ -4,7 +4,7 @@
     <mat-grid-tile>
 
     <div class="center">
-        <h2>Insertion nouveau Message !</h2>
+        <h2>Créer un nouveau message !</h2>
         <form class="createMessage" [formGroup]="form" (ngSubmit)="submit()">
 
             <mat-list>
@@ -29,6 +29,7 @@
         <p *ngIf="error">{{ error }}</p>
     </div>
     </mat-grid-tile>
+
     <mat-grid-tile>
         <img src="assets/ic_message.jpg" alt="image"/>
     </mat-grid-tile>
