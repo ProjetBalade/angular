@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4990668b-8461-4a93-978d-7b33fb4ba4ce" name="Changes" comment="">
+    <list default="true" id="4990668b-8461-4a93-978d-7b33fb4ba4ce" name="Changes" comment="Sauvegarde avant changement pour l'affichage des commentaires. + ajout de l'affichage des détails sur les balades">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/messages/components/message-form/message-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/messages/components/message-form/message-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/messages/components/messages-list-view/messages-list-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/messages/components/messages-list-view/messages-list-view.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/rides/components/new-ride-form/new-ride-form.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +140,8 @@
       <workItem from="1640212964695" duration="9000" />
       <workItem from="1640254086774" duration="4697000" />
       <workItem from="1640280201443" duration="14181000" />
-      <workItem from="1640357825010" duration="795000" />
+      <workItem from="1640357825010" duration="1020000" />
+      <workItem from="1640359884167" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1636723684561</created>
