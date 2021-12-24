@@ -1,7 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Dog} from "../../../../core/models/dog";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {DogRepository} from "../../../../core/repositories/dog-repository";
 import {catchError, throwError} from "rxjs";
 import {MatDialogRef} from "@angular/material/dialog";
 import {DogApiService} from "../../../../core/services/dog-api.service";
@@ -19,7 +18,6 @@ export class DogFormComponent implements OnInit {
     nameDog: ['', Validators.required],
     raceDog:['', Validators.required],
     dateOfBirth:['', Validators.required]
-
 
   });
 
