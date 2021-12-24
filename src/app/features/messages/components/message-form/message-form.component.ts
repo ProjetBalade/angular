@@ -5,6 +5,7 @@ import {MatDialogRef} from "@angular/material/dialog";
 import {catchError, throwError} from "rxjs";
 import {MessageApiService} from "../../../../core/services/message-api.service";
 import {CreateMessageRequest} from "../../../../core/dto/CreateMessageRequest";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-message-form',
@@ -16,7 +17,9 @@ export class MessageFormComponent implements OnInit {
   @Output() messageCreated: EventEmitter<Message> = new EventEmitter<Message>();
   error = '';
 
-  constructor(private fb: FormBuilder,
+  constructor(
+    private _snackBar: MatSnackBar,
+    private fb: FormBuilder,
               private messageService : MessageApiService,
               public dialogRef : MatDialogRef<MessageFormComponent>) {
   }
@@ -43,6 +46,7 @@ export class MessageFormComponent implements OnInit {
           return throwError(err);
         })
     ).subscribe(value => {
+      this._snackBar.open('Message envoyé', 'Ok');
       this.closeDialog();
     })
   }

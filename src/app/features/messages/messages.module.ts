@@ -14,6 +14,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatListModule} from "@angular/material/list";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
     declarations: [
@@ -37,7 +38,8 @@ import {MatListModule} from "@angular/material/list";
         MatInputModule,
         MatDialogModule,
         MatGridListModule,
-        MatListModule
+        MatListModule,
+        MatSnackBarModule
     ]
 })
 export class MessagesModule { }

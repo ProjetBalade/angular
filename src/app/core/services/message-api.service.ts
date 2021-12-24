@@ -30,11 +30,7 @@ export class MessageApiService implements MessageRepository {
   }
 
   Create(message: CreateMessageRequest): Observable<Message> {
-    return this.http.post<Message>(MessageApiService.URL + '/create', message)
-      .pipe(tap(newMessage => {
-      this.lastRetrievedMessage.push(newMessage);
-      this.messages.next(this.lastRetrievedMessage);
-    }));
+    return this.http.post<Message>(MessageApiService.URL + '/create', message);
   }
 
 
