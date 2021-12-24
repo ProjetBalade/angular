@@ -14,6 +14,9 @@ import {NewRideFormComponent} from "./features/rides/components/new-ride-form/ne
 import {AdminComponent} from "./features/admin/pages/admin/admin.component";
 import {AdministratorGuard} from "./core/guards/administrator.guard";
 import {NotAuthenticatedGuard} from "./core/guards/not-authenticated.guard";
+import {DogFormComponent} from "./features/profile/components/dog-form/dog-form.component";
+import {DogsListComponent} from "./features/profile/pages/dogs-list/dogs-list.component";
+
 const routes: Routes = [
   {
     path: '', redirectTo: 'login', pathMatch: 'full'
@@ -49,7 +52,16 @@ const routes: Routes = [
   {
     canActivate: [AuthenticatedGuard,AdministratorGuard],
     path: 'admin', component: AdminComponent
+  },
+  {
+    canActivate: [AuthenticatedGuard],
+    path: 'profileAddDog', component: DogFormComponent
+  },
+  {
+    canActivate: [AuthenticatedGuard],
+    path: 'CreateDog', component: DogsListComponent
   }
+
 ];
 
 @NgModule({
