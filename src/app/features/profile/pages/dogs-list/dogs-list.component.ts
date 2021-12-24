@@ -63,7 +63,6 @@ export class DogsListComponent implements OnInit, OnDestroy {
 
 
     OnNavigate() {
-        //this.router.navigate(['./','profileAddDog']);
       this.dialog.open(DogFormComponent, {
         height: '400px',
         width: '600px',

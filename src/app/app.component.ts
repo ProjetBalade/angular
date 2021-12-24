@@ -29,9 +29,6 @@ export class AppComponent {
         this.router.navigate(['/messages']);
         break;
       case 2:
-        this.router.navigate(['/notifications']);
-        break;
-      case 3:
         this.router.navigate(['/profile']);
         break;
     }

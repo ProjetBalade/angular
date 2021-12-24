@@ -46,20 +46,8 @@ const routes: Routes = [
     path: 'profile', component: ProfileDetailsComponent
   },
   {
-    canActivate: [AuthenticatedGuard],
-    path: 'addRide', component: NewRideFormComponent
-  },
-  {
     canActivate: [AuthenticatedGuard,AdministratorGuard],
     path: 'admin', component: AdminComponent
-  },
-  {
-    canActivate: [AuthenticatedGuard],
-    path: 'profileAddDog', component: DogFormComponent
-  },
-  {
-    canActivate: [AuthenticatedGuard],
-    path: 'CreateDog', component: DogsListComponent
   }
 
 ];

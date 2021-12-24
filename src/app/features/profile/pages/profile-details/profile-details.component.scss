@@ -1,7 +1,16 @@
-div{
-  background-color: white;
-  margin-top: 2%;
+.content {
+  padding: 20px;
+}
 
+.user-name {
+  background-color: #e1bee7;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+div{
+  margin-top: 2%;
 }
 img {
   object-fit: contain;
